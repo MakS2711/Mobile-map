@@ -5,4 +5,5 @@ REST-API проект, разрабатываемый в рамках курсо
 - Spring Framework (Core, Boot, Data JPA, MVC)
 - Lombok
 - PostgreSQL
+- Swagger
 
