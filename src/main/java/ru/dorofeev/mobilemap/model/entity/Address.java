@@ -3,6 +3,7 @@ package ru.dorofeev.mobilemap.model.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Getter
@@ -14,7 +15,9 @@ import javax.persistence.*;
 @Table(uniqueConstraints = {
         @UniqueConstraint(columnNames = {"locality_id", "street_id", "houseNumber"})
 })
-public class Address {
+public class Address implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "address_generator")
     @SequenceGenerator(name = "address_generator", sequenceName = "address_seq")
